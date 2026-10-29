@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build, Break, Fix: AI Chat UI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>AI Chat UI <small>scripted model · no API key</small></h1>
+    <div class="status-wrap">status: <span id="status" class="pill" data-status="ready">ready</span></div>
+  </header>
+
+  <div class="layout">
+    <main>
+      <div id="messages" aria-live="polite"></div>
+      <div class="quick">
+        <button type="button" data-q="hello">hello</button>
+        <button type="button" data-q="weather in Austin">weather in Austin</button>
+        <button type="button" data-q="Summarize this page" class="danger">Summarize this page</button>
+        <button type="button" id="reset" class="ghost">Reset</button>
+      </div>
+      <form id="form">
+        <input id="input" autocomplete="off" placeholder="Type a message…">
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Defenses <small>(edit defenses.json)</small></h2>
+        <ul id="defenses" class="badges"></ul>
+      </section>
+      <section>
+        <h2>😈 Attacker's server</h2>
+        <p class="hint">Everything the attacker has received:</p>
+        <ul id="attacker" class="attacker"><li class="empty">nothing received</li></ul>
+      </section>
+    </aside>
+  </div>
+
+  <script src="/render.js"></script>
+  <script src="/chat-state.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

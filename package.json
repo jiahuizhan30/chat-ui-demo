@@ -1,0 +1,11 @@
+{
+  "name": "chat-ui-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build, Break, Fix: a streaming AI chat UI with tool calling, generative UI, and prompt injection. Zero dependencies.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "engines": { "node": ">=18" }
+}
